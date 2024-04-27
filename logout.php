@@ -1,9 +1,7 @@
 <?php
-include('config.php');
-include('functions.php');
-redirect('index.php');
-
-    $unset['UID'];
-    $unset['UNAME'];
-
+session_start();
+if(session_destroy())
+{
+header("Location: login.php");
+}
 ?>
